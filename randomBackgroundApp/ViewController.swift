@@ -25,7 +25,8 @@ class ViewController: UIViewController {
     @IBAction func getRandomColor(_ sender: Any) {
         
         // backgroundView.backgroundColor = randomColor();
-        backgroundView.backgroundColor = UIColor.MaterialColors.Blue;
+        // call randomMaterialColor() instead of MaterialColors.Blue.A100
+        backgroundView.backgroundColor = UIColor.MaterialColors.Blue.A100;
     }
 }
 
@@ -36,3 +37,5 @@ func randomColor() -> UIColor {
     let brightness : CGFloat = CGFloat(arc4random() % 128) / 256 + 0.25
     return UIColor(hue: hue, saturation: saturation, brightness: brightness, alpha: 1)
 }
+
+// TODO: func randomMaterialColor() -> UIColor { ... }
